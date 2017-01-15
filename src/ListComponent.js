@@ -29,7 +29,7 @@ class List extends Component {
     });
 
     return (
-      <Table celled striped compact unstackable>
+      <Table celled basic compact unstackable>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell></Table.HeaderCell>
