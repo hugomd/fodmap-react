@@ -13,11 +13,11 @@ class List extends Component {
       if (item.name.toLowerCase().includes(this.props.term) || this.props.term === "") {
         list.push(
           <Table.Row positive={ !item.status } negative={ item.status } key={ index } >
-            <Table.Cell>
+            <Table.Cell textAlign='center'>
               { !item.status ? (
-                <Icon name='checkmark' />
+                <Icon size='big' name='checkmark' />
               ) : (
-                <Icon name='close' />
+                <Icon size='big' name='close' />
               )}
             </Table.Cell>
             <Table.Cell>{ item.name }</Table.Cell>
@@ -29,7 +29,7 @@ class List extends Component {
     });
 
     return (
-      <Table celled basic compact unstackable>
+      <Table celled basic unstackable fluid>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell></Table.HeaderCell>
