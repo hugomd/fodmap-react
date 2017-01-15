@@ -29,7 +29,7 @@ class List extends Component {
     });
 
     return (
-      <Table celled basic unstackable fluid>
+      <Table celled basic='very' collapsable unstackable fluid>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell></Table.HeaderCell>

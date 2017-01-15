@@ -55,7 +55,7 @@ class Search extends Component {
             <div className='ui category search item'>
               <div className='ui transparent icon input'>
                 <Input className='prompt' value={this.state.food} size='big' tabIndex={0} onChange={this.handleChange} placeholder='Search term here' />
-                <i className='close link icon' onClick={this.iconClick} />
+                <i className='close link icon big' onClick={this.iconClick} />
               </div>
             </div>
           </Menu.Menu>
@@ -64,9 +64,7 @@ class Search extends Component {
           </Menu.Item>
         </Menu>
 
-        <Segment basic horizontal attached='bottom'>
-          <List term={ this.state.food } />
-        </Segment>
+        <List term={ this.state.food } />
 
         <Modal size='small' open={this.state.open} onClose={this.closeModal}>
           <Modal.Header>
