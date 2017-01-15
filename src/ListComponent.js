@@ -12,14 +12,15 @@ class List extends Component {
     data.foods.forEach((item, index) => {
       if (item.name.toLowerCase().includes(this.props.term) || this.props.term === "") {
         list.push(
-          <Table.Row key={ index } >
-            <Table.Cell>{ item.name }</Table.Cell>
-            <Table.Cell positive={ !item.status } error={ item.status }>
-              { item.status ? (
+          <Table.Row positive={ !item.status } negative={ item.status } key={ index } >
+            <Table.Cell>
+              { !item.status ? (
+                <Icon name='checkmark' />
+              ) : (
                 <Icon name='close' />
-              ) : <Icon name='checkmark' /> }
-              { status[item.status] }
+              )}
             </Table.Cell>
+            <Table.Cell>{ item.name }</Table.Cell>
             <Table.Cell>{ categories[item.category] }</Table.Cell>
             <Table.Cell warning={ item.hasOwnProperty('note') }>{ item.note }</Table.Cell>
           </Table.Row>
@@ -31,8 +32,8 @@ class List extends Component {
       <Table celled striped compact unstackable>
         <Table.Header>
           <Table.Row>
+            <Table.HeaderCell></Table.HeaderCell>
             <Table.HeaderCell>Name</Table.HeaderCell>
-            <Table.HeaderCell>Edible</Table.HeaderCell>
             <Table.HeaderCell>Category</Table.HeaderCell>
             <Table.HeaderCell>Note</Table.HeaderCell>
           </Table.Row>
