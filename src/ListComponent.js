@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { Label, Menu, Table, Icon } from 'semantic-ui-react';
+import { Table, Icon } from 'semantic-ui-react';
 import data from './data/fodmap.json';
 
 class List extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let list = [];
 
