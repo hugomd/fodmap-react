@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "semantic-ui-css": "^2.2.4",
+    "semantic-ui-react": "^0.64.0"
   },
   "scripts": {
     "now-start": "serve build/",
