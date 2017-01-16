@@ -7,7 +7,6 @@ class List extends Component {
     let list = [];
 
     let categories = data.categories;
-    let status = data.status;
 
     data.foods.forEach((item, index) => {
       if (item.name.toLowerCase().includes(this.props.term) || this.props.term === "") {

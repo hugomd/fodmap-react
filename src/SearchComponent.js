@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Modal, Segment, Button, Input, Icon } from 'semantic-ui-react';
+import { Menu, Modal, Button, Input, Icon } from 'semantic-ui-react';
 import List from './ListComponent';
 
 class Search extends Component {
