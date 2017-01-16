@@ -50,16 +50,16 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <Menu attached='top' width={2}>
+        <Menu attached='top'>
           <Menu.Menu>
-            <div className='ui category search item'>
-              <div className='ui transparent icon input'>
+            <div className='ui fluid category search item'>
+              <div className='ui fluid transparent icon input'>
                 <Input className='prompt' value={this.state.food} size='big' tabIndex={0} onChange={this.handleChange} placeholder='Search term here' />
                 <i className='close link icon big' onClick={this.iconClick} />
               </div>
             </div>
           </Menu.Menu>
-          <Menu.Item position='right' name='editorials' onClick={this.openModal}>
+          <Menu.Item position='right' name='help' onClick={this.openModal}>
             <Icon name='help' circular inverted />
           </Menu.Item>
         </Menu>
@@ -72,8 +72,9 @@ class Search extends Component {
           </Modal.Header>
           <Modal.Content>
             <p>
-              FODMAP Search was created, and is maintained by, <a href='http://hu.md/'>me</a>. With data sets provided by <a href='https://github.com/melaniehuang/fodmap-web'>Melanie Huang</a> and <a href='https://github.com/timbenniks/FODMAP'>Tim Benniks</a>.<br /><br />
-              The aim of this website was to make it easier for girlfriend to quickly lookup what she is and isn't allowed to consume on the FODMAP diet.
+              This aims to provide an easy way to search through ingredients to find out whether they are FODMAP-free.<br /><br />
+              The app was created, and is maintained by, <a href='http://hu.md/'>Hugo Müller-Downing</a>. It uses data sets created by <a href='https://github.com/melaniehuang/fodmap-web'>Melanie Huang</a> and <a href='https://github.com/timbenniks/FODMAP'>Tim Benniks</a>.<br /><br />
+              <a href='https://github.com/hugomd/fodmap-react'><Icon name='github' circular inverted link/></a>
             </p>
           </Modal.Content>
           <Modal.Actions>
