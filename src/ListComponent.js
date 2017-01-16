@@ -29,7 +29,7 @@ class List extends Component {
 
     return (
       <div>
-        { list.length == 0 ? (
+        { list.length === 0 ? (
           <Message warning attached='bottom'>
             <p>I can't find that ingredient...</p>
           </Message>
