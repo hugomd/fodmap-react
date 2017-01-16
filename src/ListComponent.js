@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Icon } from 'semantic-ui-react';
+import { Table, Icon, Message } from 'semantic-ui-react';
 import data from './data/food.json';
 
 class List extends Component {
@@ -28,20 +28,28 @@ class List extends Component {
     });
 
     return (
-      <Table celled basic='very' collapsable unstackable fluid>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell></Table.HeaderCell>
-            <Table.HeaderCell>Name</Table.HeaderCell>
-            <Table.HeaderCell>Category</Table.HeaderCell>
-            <Table.HeaderCell>Note</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
+      <div>
+        { list.length == 0 ? (
+          <Message warning attached='bottom'>
+            <p>I can't find that ingredient...</p>
+          </Message>
+        ) : (
+          <Table celled basic='very' unstackable>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell></Table.HeaderCell>
+                <Table.HeaderCell>Name</Table.HeaderCell>
+                <Table.HeaderCell>Category</Table.HeaderCell>
+                <Table.HeaderCell>Note</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
 
-        <Table.Body>
-          { list }
-        </Table.Body>
-      </Table>
+            <Table.Body>
+              { list }
+            </Table.Body>
+          </Table>
+        )}
+      </div>
     );
   }
 }
