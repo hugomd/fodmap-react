@@ -34,7 +34,7 @@ class List extends Component {
             <p>I can't find that ingredient...</p>
           </Message>
         ) : (
-          <Table celled basic='very' unstackable>
+          <Table celled basic unstackable>
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell></Table.HeaderCell>

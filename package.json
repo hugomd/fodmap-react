@@ -18,6 +18,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "now -e REACT_APP_SECRET_CODE=secretcode"
+    "deploy": "npm run build; cd build && now --static --alias fodmap.now.sh --name fodmap-react"
   }
 }
