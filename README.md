@@ -7,3 +7,5 @@ It uses data sets from [Melanie Huang](https://github.com/melaniehuang/fodmap-we
 The website is freely accessible from this URL: https://fodmap.now.sh
 
 If you find any bugs or missing features, feel free to open a [new issue](https://github.com/hugomd/fodmap-react/issues/new) here on GitHub. If you would like to contribute, please fork the repo and make a pull request and I'll get to it when I have time!
+
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/hugomd/fodmap-react)
